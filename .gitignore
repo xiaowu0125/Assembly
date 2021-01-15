@@ -1,0 +1,6 @@
+Assembly.xcodeproj/xcuserdata/
+Assembly.xcworkspace/
+Pods/
+*.swp
+.DS_Store
+Assembly.xcodeproj/project.xcworkspace/xcuserdata/
