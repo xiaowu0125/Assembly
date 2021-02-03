@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^CallBackBlock)(id params);
+
 @interface AViewController : UIViewController
+
+@property (nonatomic, copy) CallBackBlock callBackBlock;
 
 @end
 

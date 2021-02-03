@@ -16,6 +16,9 @@
 @end
 
 @implementation AViewController
+{
+    NSInteger _clickNum;
+}
 
 #pragma mark - life cycle
 
@@ -25,6 +28,11 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.pushBViewControllerButton];
+    
+    _clickNum = 0;
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd  target:self action:@selector(selectRightAction:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 - (void)viewWillLayoutSubviews {
@@ -37,6 +45,16 @@
 
 
 #pragma mark - event response
+
+- (void)selectRightAction:(UIButton *)button {
+    
+    _clickNum++;
+    
+    if (self.callBackBlock) {
+        self.callBackBlock(@(_clickNum));
+    }
+}
+
 - (void)didTappedPushBViewControllerButton:(UIButton *)button {
     
     UIViewController *viewController = [[CTMediator sharedInstance] B_viewControllerWithContentText:@"hello, world!"];
