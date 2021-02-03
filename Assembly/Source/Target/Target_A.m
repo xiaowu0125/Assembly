@@ -19,13 +19,15 @@
 
 - (UIViewController *)Action_Category_ViewController:(NSDictionary *)params {
     
-    typedef void (^CallbackType)(NSString *);
+    typedef void (^CallbackType)(id);
     CallbackType callback = params[@"callback"];
-    if (callback) {
-        callback(@"success");
-    }
-    
+
     AViewController *viewController = [[AViewController alloc] init];
+    [viewController setCallBackBlock:^(id  _Nonnull params) {
+        if (callback) {
+            callback(params);
+        }
+    }];
     return viewController;
 }
 
