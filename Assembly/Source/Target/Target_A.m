@@ -23,9 +23,9 @@
     CallbackType callback = params[@"callback"];
 
     AViewController *viewController = [[AViewController alloc] init];
-    [viewController setCallBackBlock:^(id  _Nonnull params) {
+    [viewController setCallBackBlock:^(id _Nonnull dict) {
         if (callback) {
-            callback(params);
+            callback(dict);
         }
     }];
     return viewController;
