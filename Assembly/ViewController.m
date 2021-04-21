@@ -20,6 +20,8 @@
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(100, 100, 200, 100);
     button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"按钮" forState:(UIControlStateNormal)];
+    [button setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
     [self.view addSubview:button];
 }
 
