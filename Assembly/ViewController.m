@@ -23,8 +23,6 @@
     [button setTitle:@"按钮" forState:(UIControlStateNormal)];
     [button setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
     [self.view addSubview:button];
-    
-    /////////////////////
 }
 
 
