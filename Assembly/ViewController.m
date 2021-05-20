@@ -26,6 +26,8 @@
     
     
     ////// 测试测试测试
+    UIImageView *imageView = [[UIImageView alloc]init];
+    [self.view addSubview:imageView];
 }
 
 
