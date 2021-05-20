@@ -27,6 +27,7 @@
     
     ////// 测试测试测试
     UIImageView *imageView = [[UIImageView alloc]init];
+    imageView.backgroundColor = [UIColor redColor];
     [self.view addSubview:imageView];
 }
 
